@@ -1,0 +1,476 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+header{
+    
+    height: 450px;
+    
+    background-image: linear-gradient(to top, rgba(205, 92, 228, 0.26) 0%, rgba(255, 1, 183, 0.075) 100%),url(../img/portada.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+}
+.head{
+    text-align: center;
+padding: 0;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+color: #c544ec;
+font-family: cursive;
+text-shadow: 3px 3px 4px #020202;
+
+}
+.hamburguer{
+    position: fixed;
+    
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow:  0 0 8px rgba(159, 138, 208, 0.445) ;
+
+}
+.menu_navegacion{
+position: fixed;
+top: 0;
+right: 0;
+width: 30vw;
+height: 100%;
+background-image: linear-gradient(to top, #ac8cf775 0%, #9f8ad03b 100%);
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+transition: transform .3s ease-in-out;
+transform: translate(110%);
+box-shadow: 0 0 6px rgba(159, 138, 208, 0.445);
+
+}
+.spread{
+    transform: translate(0);
+}
+.menu_navegacion a{
+    color: #020101;
+    text-decoration: none;
+    text-shadow: 3px 3px 4px #c768f3;
+    font-size: 30px;
+}
+.titulo{
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+.copy {
+    font-weight: 300;
+    font-size: 35px;
+    color: #f9d4ff;
+    animation: animarTexto 6s ease  alternate; /* Aplica la animación llamada 'animarTexto' */
+}
+
+@keyframes animarTexto {
+    0% {
+        transform: scale(1); /* Estado inicial: tamaño normal */
+    }
+    100% {
+        transform: scale(1.1); /* Estado final: aumentar el tamaño */
+    }
+}
+/*nuestro servicio*/
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color:black;
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-shadow: 2px 1px 3px #020202;
+
+}
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    
+        background: linear-gradient(135deg, #e99dfce8 20%, #f9d4ff 80%);
+    
+    
+   color: #060507;
+   border-radius: 40px;
+   box-shadow: 3px 3px 3px 3px #0a0a0a;
+  
+}
+
+.contenedor-galeria img{
+    width: 40%;
+}
+.checklist-cursos{
+    width: 45%;
+}
+.service{
+    margin-bottom: 20px;
+
+}
+.n-service{
+
+margin-bottom: 7px;
+color: #000000;
+}
+.number{
+    display: inline-block;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+width: 30px;
+height: 30px;
+color: #fff;
+text-align: center;
+border-radius: 50%;
+font-weight: 700;
+line-height: 30px;
+margin-right: 5px;
+}
+.gallery{
+   
+        background: radial-gradient(circle, #e99dfce8, #ffffff);
+    
+    
+}
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.img-galeria {
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Agrega una transición suave al efecto de agrandamiento */
+}
+
+.img-galeria:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+.imagen-ligth{
+    position: fixed;
+    background: rgba(0,0,0,.6);
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+justify-content: center;
+align-items: center;
+transform: translate(100%);
+transition: transform .2s ease-in-out;
+
+}
+.show{
+    transform: translate(0);
+}
+.agregar-imagen{
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+.showImage{
+    transform: scale(1);
+}
+
+
+.close{
+    position: absolute;
+    top:15px;
+    right:15px;
+    width: 40px;
+    cursor: pointer;
+
+
+
+}
+/*    expertos      */
+.expert{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  margin-left: 20px;
+}
+.datoclau{margin-left: 20px;}
+.cont-expert{
+  
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cont-expert img{
+    width: 300px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    margin-left: 20px;
+    border: none;
+    box-shadow: 0 0 15px 10px rgba(118, 75, 162, 0.7); 
+}
+.n-expert{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 400;
+}
+/*footer*/
+footer{
+    background: #9f8ad0;
+    padding-bottom: 0.1px;
+
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:  wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.contenedor-contacto {
+    background-color: #cc8ad4ee; /* Color lavanda */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contac-us {
+    margin-bottom: 20px;
+}
+
+.brand {
+    color: #fff; /* Texto blanco */
+    font-size: 24px;
+}
+
+.brand + p {
+    color: #fff; /* Texto blanco */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permitir envolver los elementos en múltiples líneas */
+}
+
+.socialmedia-icon {
+    color: #fff; /* Iconos en blanco */
+    font-size: 40px; /* Tamaño de iconos aumentado */
+    margin: 0 15px; /* Espaciado entre los iconos */
+}
+
+.line {
+    border-top: 1px solid #ccc; /* Línea de separación */
+    margin-top: 20px;
+    box-shadow: 3px 3px 4px #020202;
+
+}
+
+.contac-us{
+    width: 40%;
+    color: #fff;
+    text-shadow: 3px 3px 4px #020202;
+
+}
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+.brand+p{
+    font-weight: 500;
+
+}
+.social-media{
+   
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+/******************************/
+.socialmedian-icon{
+   
+    display: flow-root;
+    margin-left: 100px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    
+
+}
+.socialmedian-icon:hover{
+    background: #fff;
+    color: #764ba2;
+}
+.socialmedian-icon i{
+    font-size: 30px;
+    line-height: 50px;
+}
+ .line{
+     width: 90%;
+     max-width: 1200px;
+     margin: auto;
+     height: 2px;
+     background: #fff;
+     margin-bottom: 60px;
+ }
+
+
+ /*   responsib*/
+ /* Resto del CSS anterior... */
+
+/* Responsivo para pantallas con un ancho máximo de 800px */
+@media screen and (max-width: 800px) {
+    .contenedor {
+        padding: 20px; /* Agregar un poco de espacio alrededor del contenido */
+    }
+    .subtitulo {
+        text-align: center; /* Centrar el texto */
+    }
+    .expert {
+        display: flex;
+        flex-direction: column; /* Cambiar la dirección del flexbox a vertical */
+        align-items: center; /* Centrar los elementos horizontalmente */
+    }
+    .cont-expert img {
+        margin-bottom: 10px; /* Agregar margen inferior a la imagen */
+    }
+    .datoclau {
+        width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+        text-align: center; /* Centrar el texto horizontalmente */
+        margin-top: 10px; /* Añadir un poco de margen superior */
+    }
+    header {
+        height: 300px; /* Reducir la altura del encabezado */
+    }
+    .head {
+        font-size: 24px; /* Reducir el tamaño del texto */
+    }
+    .hamburguer {
+        top: 20px;
+        right: 20px;
+        width: 30px; /* Reducir el tamaño del ícono */
+        height: 30px; /* Reducir el tamaño del ícono */
+    }
+    .menu_navegacion {
+        width: 50vw; /* Reducir el ancho del menú */
+    }
+    .titulo {
+        font-size: 40px; /* Reducir el tamaño del título */
+        margin-bottom: 10px; /* Reducir el margen inferior */
+    }
+    /* Resto de los ajustes para el tamaño de pantalla de 800px */
+}
+
+/* Responsivo para pantallas con un ancho máximo de 500px */
+@media screen and (max-width: 500px) {
+    .cont-expert {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cont-expert img {
+        margin-bottom: 10px;
+    }
+    .n-expert {
+        margin-top: 0;
+    }
+    /* Mover .datoclau debajo de todo lo demás */
+    .datoclau {
+        margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    }
+    /* Otros ajustes necesa
+    .menu_navegacion {
+        width: 65vw; /* Reducir el ancho del menú */
+    }
+    .hamburguer {
+        top: 15px; /* Ajustar la posición del botón hamburguesa */
+        right: 15px; /* Ajustar la posición del botón hamburguesa */
+    }
+    .titulo {
+        font-size: 30px; /* Reducir el tamaño del título */
+    }
+    .subtitulo {
+        font-size: 30px; /* Reducir el tamaño del subtítulo */
+    }
+    .agregar-imagen,
+    .img-galeria {
+        width: 95%; /* Ajustar el ancho de las imágenes */
+    }
+    .social-media {
+        width: 100%; /* Ajustar el ancho de las redes sociales */
+    }
+    .contac-us {
+        width: 90%; /* Ajustar el ancho del contacto */
+    }
+    /* Resto de los ajustes para el tamaño de pantalla de 500px */
+}
+
+/* Resto del CSS anterior... */
+
+
+
+ /*de resolucion 300px*/
+ @media screen and(max-width:500px) {
+     .menu_navegacion{
+         width: 65vw;
+     }
+     .hamburguer{
+         top: 20px;
+         right: 20px;
+     }
+     .titulo{
+         font-size: 30px;
+     }
+     .sustitulo{
+         font-size: 30px;
+     }
+     .agregar-imagen{
+         width: 95%;
+     }
+     .img-galeria{
+         width: 95%;
+
+     }
+     .social-media{
+         width: 100%;
+     }
+.contac-us{
+    width: 90%;
+
+}
+
+
+
+ }
